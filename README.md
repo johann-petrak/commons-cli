@@ -40,13 +40,14 @@
  |                                                                      |
  +======================================================================+
 --->
-NOTE: THIS IS A FORK OF THE ORIGINAL SOURCE CODE AVAILBLE FROM 
+NOTE: THIS IS A FORK OF THE ORIGINAL SOURCE CODE AVAILABLE FROM 
 https://commons.apache.org/proper/commons-cli/source-repository.html
 
-It makes a small change I needed to the original code but which no-one
-ever bothered to address, see
-https://issues.apache.org/jira/browse/CLI-257
-
+It makes a small change to the original code for something I needed in other
+software packages: make it possible to simply ignore command line options which are not
+known. This allows to pass around one string of options to several receiving
+modules where each module then can just interpret the options it knows about.
+See also https://issues.apache.org/jira/browse/CLI-257 
 
 Apache Commons CLI
 ===================
