@@ -43,6 +43,10 @@ public class DefaultParser implements CommandLineParser
      */
     protected boolean stopAtNonOption;
 
+    protected boolean ignoreUnknownOptions = false;
+
+    public void setIgnoreUnknownOptions(boolean flag) { ignoreUnknownOptions = flag; }
+
     /** The token currently processed. */
     protected String currentToken;
  
@@ -355,7 +359,7 @@ public class DefaultParser implements CommandLineParser
      */
     private void handleUnknownToken(String token) throws ParseException
     {
-        if (token.startsWith("-") && token.length() > 1 && !stopAtNonOption)
+        if (token.startsWith("-") && token.length() > 1 && !stopAtNonOption && !ignoreUnknownOptions)
         {
             throw new UnrecognizedOptionException("Unrecognized option: " + token, token);
         }

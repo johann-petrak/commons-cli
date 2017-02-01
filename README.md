@@ -40,6 +40,14 @@
  |                                                                      |
  +======================================================================+
 --->
+NOTE: THIS IS A FORK OF THE ORIGINAL SOURCE CODE AVAILBLE FROM 
+https://commons.apache.org/proper/commons-cli/source-repository.html
+
+It makes a small change I needed to the original code but which no-one
+ever bothered to address, see
+https://issues.apache.org/jira/browse/CLI-257
+
+
 Apache Commons CLI
 ===================
 
